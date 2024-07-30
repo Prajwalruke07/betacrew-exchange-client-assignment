@@ -2,40 +2,30 @@
 
 This Node.js client application interacts with the BetaCrew exchange server to retrieve stock ticker data. The client connects to a TCP server, requests stock data, and processes the received packets to generate a JSON file with all sequences.
 
-## Prerequisites
+Instructions to Run the Code:
 
-- Node.js v16.17.0 or higher
+1)Clone the Repository:
+Command: git clone https://github.com/Prajwalruke07/betacrew-exchange-client-assignment.git
 
-## Setup and Installation
+2)Navigate to the Project Directory:
+Command: cd betacrew-exchange-client-assignment
 
-1. **Clone the Repository:**
+3)Install Dependencies:
+Command: npm install
 
-   ```sh
-   git clone [(https://github.com/Prajwalruke07/betacrew-exchange-client-assignment/tree/main)]
-Navigate to the Project Directory:
+4)Start the BetaCrew Exchange Server (if not already running):
+Unzip the betacrew_exchange_server.zip and navigate to the server directory.
+Command: cd betacrew_exchange_server
 
-sh
-Copy code
-cd [Name of the Repository Directory]
-Install Dependencies:
+5)Command: node main.js
 
-Install the necessary Node.js packages by running:
-npm install
+6)Run the Node.js Client:
+Command: node client.js
 
-Running the Application
-Start the BetaCrew Exchange Server:
+7)Check the Output:
+The output will be saved in a file named output.json in the project directory. If the file is empty or missing, ensure that the client is properly interacting with the server.
+Please let me know if you have any questions or need further information.
 
-Before running the client, ensure that the BetaCrew exchange server is running. If you need the server code, follow the instructions provided separately.
-
-Run the Client:
-
-In a separate terminal window, navigate to the client directory and run:
-
-
-node client.js
-Check the Output:
-
-After running the client, the results will be saved in output.json located in the client directory. This file contains an array of packets with increasing sequence numbers.
 
 How It Works
 Connection: The client connects to the TCP server using Node.js's net module.
